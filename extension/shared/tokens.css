@@ -1,0 +1,59 @@
+/* WebWhisper design tokens — the ONLY place colors, spacing, radii and fonts are defined. */
+
+@font-face { font-family: 'Poppins'; font-weight: 400; font-style: normal; font-display: swap;
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-weight: 500; font-style: normal; font-display: swap;
+  src: url('../fonts/Poppins-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-weight: 700; font-style: normal; font-display: swap;
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype'); }
+
+:root {
+  color-scheme: dark;
+
+  /* Color */
+  --color-bg: #080909;
+  --color-surface: #111817;
+  --color-card: #1A302C;
+  --color-accent: #59D7BC;
+  --color-accent-hover: #7FE3CD;
+  --color-on-accent: #080909;
+  --color-text: #FFFFFF;
+  --color-text-muted: #A6AEAB;
+  --color-border: #243B36;
+  --color-border-strong: #35564F;
+  --color-focus: var(--color-accent);
+
+  /* Type — --font-base is set at runtime by the text-size control (14px–28px) */
+  --font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-base: 20px;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --leading-tight: 1.25;
+  --leading-body: 1.55;
+  --tracking-label: 0.08em;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.75rem;
+
+  /* Radii (flat, small) */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+
+  /* Misc */
+  --border-width: 1px;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --transition: 150ms ease;
+  --control-height: 2.75rem;
+  --focus-width: 2px;
+}

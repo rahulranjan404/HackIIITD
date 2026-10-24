@@ -1,0 +1,2 @@
+Poppins (Regular, Medium, Bold) is licensed under the SIL Open Font License 1.1.
+Bundled locally; no CDN. Include the full OFL text if you redistribute the extension.

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebWhisper</title>
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="panel.css">
+  <script type="module" src="panel.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <header class="app-header">
+    <div class="header-row">
+      <div class="brand">
+        <svg class="icon brand__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg>
+        <h1>WebWhisper</h1>
+        <span id="status" class="status" data-state="ready">Ready</span>
+      </div>
+      <div class="size-control" role="group" aria-label="Text size">
+        <button id="size-down" class="btn btn--icon" type="button" aria-label="Decrease text size"><span class="size-glyph size-glyph--small" aria-hidden="true">A&minus;</span></button>
+        <button id="size-up" class="btn btn--icon" type="button" aria-label="Increase text size"><span class="size-glyph size-glyph--large" aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-bar" aria-label="Current page">
+    <p class="page-info"><span class="page-info__label">You are on:</span> <span id="page-title" class="page-info__title">Detecting page…</span></p>
+    <button id="clear-chat" class="btn btn--ghost btn--sm" type="button">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>
+      <span>Clear chat</span>
+    </button>
+  </section>
+
+  <main id="chat" class="chat" tabindex="0" aria-label="Conversation">
+    <div id="empty" class="empty">
+      <h2 class="empty__title">Start a conversation</h2>
+      <p class="empty__text">Type a message below. In this demo version, WebWhisper repeats what it hears.</p>
+    </div>
+    <ol id="messages" class="messages" aria-live="polite" aria-relevant="additions"></ol>
+  </main>
+
+  <footer class="composer">
+    <form id="composer-form" class="composer__form" autocomplete="off">
+      <label class="sr-only" for="message-input">Message WebWhisper</label>
+      <input id="message-input" class="field" type="text" placeholder="Type a message" enterkeyhint="send" autocomplete="off">
+      <div class="composer__row">
+        <button id="mic" class="btn btn--toggle" type="button" aria-pressed="false">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/><path class="icon__slash" d="M4 4l16 16"/></svg>
+          <span>Mic</span><span id="mic-state" class="btn__state" aria-hidden="true">off</span>
+        </button>
+        <button id="stop-speaking" class="btn" type="button" disabled>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9H4zM17 9l4 6M21 9l-4 6"/></svg>
+          <span>Stop speaking</span>
+        </button>
+        <button id="send" class="btn btn--primary" type="submit">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4 18-7z"/></svg>
+          <span>Send</span>
+        </button>
+      </div>
+    </form>
+  </footer>
+
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+</div>
+</body>
+</html>
